@@ -1,9 +1,7 @@
 import { GlobalStyle } from './styles';
-import { portfolioItems } from './components/dataObjects/portfolioObjects';
+import { DisplayPortfolio } from './components/portfolioCards';
 
 function App() {
-  console.log(portfolioItems);
-
   return (
     <>
       <GlobalStyle />
@@ -13,6 +11,8 @@ function App() {
         vero nemo ad dolore voluptates illo voluptatibus facere excepturi quis suscipit quaerat
         deserunt distinctio nesciunt quas sapiente accusantium?
       </p>
+
+      <DisplayPortfolio />
     </>
   );
 }
