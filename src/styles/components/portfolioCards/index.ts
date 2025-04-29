@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { theme } from '../../theme';
 
-export const AllCardWrapper = styled.div`
+export const AllCardWrapper = styled.section`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
