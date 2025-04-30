@@ -97,7 +97,7 @@ export const StyledLogo = styled.img`
 export const StyledHamburgerIcon = styled.div`
   z-index: 100;
   display: none;
-  position: absolute;
+  position: fixed;
   right: 20px;
   top: 30px;
 
@@ -107,5 +107,6 @@ export const StyledHamburgerIcon = styled.div`
 
   @media (${device.sm}) {
     display: block;
+    
   }
 `;

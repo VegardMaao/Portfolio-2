@@ -3,7 +3,7 @@ import { AboutStyles as S } from '../../styles';
 export function AboutMe() {
   return (
     <>
-      <S.AboutWrapper>
+      <S.AboutWrapper id='about'>
         <S.Portrait
           src='https://sellmo.no/Flower_Power/wp-content/uploads/2023/02/loppa-og-skunkus-1.jpg'
           alt='Temp image'

@@ -7,7 +7,7 @@ import { PortfolioCardStyles as S } from '../../styles';
 export function DisplayPortfolio() {
   return (
     <>
-      <S.AllCardWrapper>
+      <S.AllCardWrapper id='portfolio'>
         {portfolioItems.map((item) => (
           <S.SingleCardWrapper key={item.title}>
             <h2>{item.title}</h2>
