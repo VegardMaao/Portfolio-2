@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { theme } from "../../theme";
 
 export const AboutWrapper = styled.section`
         width: 100%;
@@ -7,6 +8,7 @@ export const AboutWrapper = styled.section`
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        background: ${theme.color.blue};
 `;
 
 export const Portrait = styled.img`
@@ -21,15 +23,19 @@ export const DescriptionWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    h1, h2, p{
+        color: ${theme.color.white};
+    }
 `;
 
 export const HeaderOne = styled.h1`
-    margin-bottom: 0px;
-    font-size: 1.8rem;
+margin-bottom: 0px;
+font-size: 1.8rem;
 `;
 
 export const HeaderTwo = styled.h2`
-    text-decoration: overline;
-    font-size: 1.1rem;
-    margin: 0px;
-    `;
+text-decoration: overline;
+font-size: 1.1rem;
+margin: 0px;
+`;

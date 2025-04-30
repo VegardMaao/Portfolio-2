@@ -13,7 +13,11 @@ function Nav() {
       ></S.StyledHamburgerIcon>
       <S.NavLinkWrapper o={{ showOnMobile: showMenu }}>
         {navItems.map((link) => (
-          <S.StyledNavLink href={link.link} target={link.target}>
+          <S.StyledNavLink
+            href={link.link}
+            target={link.target}
+            onClick={() => setShowMenu(!showMenu)}
+          >
             {link.title}
           </S.StyledNavLink>
         ))}

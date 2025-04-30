@@ -29,9 +29,9 @@ export const NavbarWrapper = styled.nav`
 `;
 
 interface NavLinkWrapperProps {
-    o?: {
-        showOnMobile: boolean
-    }
+  o?: {
+    showOnMobile: boolean
+  }
 }
 
 export const NavLinkWrapper = styled.div<NavLinkWrapperProps>`
@@ -54,7 +54,7 @@ export const NavLinkWrapper = styled.div<NavLinkWrapperProps>`
       height: 80vh;
       justify-content: space-evenly;
       margin-left: none;
-      background: ${theme.color.orange};
+      background: ${theme.color.offwhite};
     }
   }
 `;
@@ -63,6 +63,7 @@ export const StyledNavLink = styled.a`
   transition: 0.3s;
   text-decoration: none;
   color: ${theme.color.blue};
+  font-size: 1.5rem; 
   margin-left: 2rem;
   padding: 10px;
   border-radius: 15px;
@@ -73,7 +74,6 @@ export const StyledNavLink = styled.a`
   }
 
   @media (${device.sm}) {
-    font-size: 1.3rem;
     display: block;
     margin: 2rem auto;
     color: ${theme.color.blue};
