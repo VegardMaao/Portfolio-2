@@ -2,6 +2,8 @@ import { ContactStyles as S } from '../../styles';
 import { useForm, Controller } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
+import { messageInterface } from '../interfaces/messageInterface';
+import { postMessage } from '../API/post/postMessage';
 
 const regEx = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 
@@ -23,28 +25,26 @@ const schema = yup
   })
   .required();
 
-type SchemaType = {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-};
-
 export function ContactSection() {
   const {
     register,
     control,
     getValues,
     formState: { errors, isDirty, isValid },
-  } = useForm<SchemaType>({
+  } = useForm<messageInterface>({
     resolver: yupResolver(schema),
     mode: 'onChange',
   });
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    // const formData = new FormData(e.currentTarget);
+    // console.log(formData);
+    // const formValues = Object.fromEntries([...formData]);
+    // console.log(formValues);
     const formData = getValues();
     console.log(formData);
+    postMessage(formData);
   };
 
   return (
