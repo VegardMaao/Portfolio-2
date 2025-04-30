@@ -14,6 +14,7 @@ function Nav() {
       <S.NavLinkWrapper o={{ showOnMobile: showMenu }}>
         {navItems.map((link) => (
           <S.StyledNavLink
+            key={link.title}
             href={link.link}
             target={link.target}
             onClick={() => setShowMenu(!showMenu)}

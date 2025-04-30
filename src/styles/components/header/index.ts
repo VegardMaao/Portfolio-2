@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { theme } from "../../theme";
 import { device } from "../../breakpoints";
+import { NavLinkWrapperProps } from "../../../components/interfaces/styledComponentsInterfaces";
 
 export const NavbarWrapper = styled.nav`
   max-width: 100vw;
@@ -28,11 +29,7 @@ export const NavbarWrapper = styled.nav`
   }
 `;
 
-interface NavLinkWrapperProps {
-  o?: {
-    showOnMobile: boolean
-  }
-}
+
 
 export const NavLinkWrapper = styled.div<NavLinkWrapperProps>`
   transition: 0.5s;
