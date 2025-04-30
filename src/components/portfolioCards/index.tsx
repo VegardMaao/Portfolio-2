@@ -5,8 +5,6 @@ import { PortfolioCardStyles as S } from '../../styles';
  * @description creates an overview of the current portfolio as defined in portfolioObjects.ts
  */
 export function DisplayPortfolio() {
-  console.log(portfolioItems);
-
   return (
     <>
       <S.AllCardWrapper>

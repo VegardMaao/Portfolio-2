@@ -1,13 +1,13 @@
 export const navItems = [{
     title: "About me",
-    link: "index.html#about",
+    link: "#about",
     target: "_self"
 }, {
     title: "Portfolio",
-    link: "index.html#portfolio",
+    link: "#portfolio",
     target: "_self"
 }, {
     title: "Contact",
-    link: "index.html#contact",
+    link: "#contact",
     target: "_self"
 }];
