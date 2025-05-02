@@ -41,10 +41,11 @@ export function ContactSection() {
     const formData: messageInterface = getValues();
 
     try {
-      const result = postMessage(formData);
-      console.log(result);
+      postMessage(formData);
     } catch (error) {
       console.log(error);
+    } finally {
+      e.currentTarget.innerHTML = `<p>Message has been sent<P>`;
     }
   };
 
