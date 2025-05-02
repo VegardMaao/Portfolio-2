@@ -39,13 +39,15 @@ export function ContactSection() {
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData: messageInterface = getValues();
+    const formElement = e.currentTarget;
 
     try {
       postMessage(formData);
-    } catch (error) {
-      console.log(error);
-    } finally {
-      e.currentTarget.innerHTML = `<p>Message has been sent<P>`;
+      formElement.innerHTML = `<p>Message has been sent<P>`;
+    } catch (error: unknown) {
+      console.dir(error);
+      return (formElement.innerHTML = `<p>Hm, something went wrong. 
+        Try again, or email me at <a href="mailto:vegardmaao@gmail.com">vegardmaao@gmail.com</a></p>`);
     }
   };
 

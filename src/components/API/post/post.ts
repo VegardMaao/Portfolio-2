@@ -21,6 +21,11 @@ export const postData = async (url: string, data: messageInterface) => {
         body: body,
     };
     const response = await fetch(url, req);
+    if (!response.ok) {
+        console.log(response);
+        throw new Error(`${response.status}`);
+    }
+
     const json = await response.json();
     return json;
 };

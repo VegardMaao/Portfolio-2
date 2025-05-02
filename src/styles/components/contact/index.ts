@@ -6,7 +6,7 @@ export const ContactSection = styled.section`
     background: ${theme.color.blue};
     padding-bottom: 45px;
 
-    h3, p, label{
+    h3, p, label, a{
         color: ${theme.color.white};
     }
 `;
