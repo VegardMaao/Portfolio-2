@@ -4,6 +4,7 @@ import { ErrorMsgProps, FormProps } from "../../../components/interfaces/styledC
 
 export const ContactSection = styled.section`
     background: ${theme.color.blue};
+    padding-bottom: 45px;
 
     h3, p, label{
         color: ${theme.color.white};
