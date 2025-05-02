@@ -1,12 +1,6 @@
 import { footerItems } from '../dataObjects/footerObjects.ts';
 import { FooterStyles } from '../../styles/';
 
-// type FooterType = {
-//   title: string;
-//   link: string;
-//   target: string;
-// }[];
-
 function FooterIcons() {
   const arr = footerItems;
   return (
