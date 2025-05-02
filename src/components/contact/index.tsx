@@ -9,7 +9,7 @@ const regEx = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 
 const schema = yup
   .object({
-    name: yup.string().min(3, 'name is too short').required(),
+    sendername: yup.string().min(3, 'name is too short').required(),
     email: yup
       .string()
       .email()
@@ -38,13 +38,14 @@ export function ContactSection() {
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // const formData = new FormData(e.currentTarget);
-    // console.log(formData);
-    // const formValues = Object.fromEntries([...formData]);
-    // console.log(formValues);
-    const formData = getValues();
-    console.log(formData);
-    postMessage(formData);
+    const formData: messageInterface = getValues();
+
+    try {
+      const result = postMessage(formData);
+      console.log(result);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -54,14 +55,14 @@ export function ContactSection() {
 
         <S.Form onSubmit={(e) => onSubmit(e)}>
           <Controller
-            name='name'
+            name='sendername'
             control={control}
             render={() => (
               <>
                 <S.FormLabel>Your Name</S.FormLabel>
-                <S.FormInput {...register('name')} />
-                <S.ErrorMsg o={{ display: errors.name?.message ? 'inline' : 'none' }}>
-                  {errors.name?.message}
+                <S.FormInput {...register('sendername')} />
+                <S.ErrorMsg o={{ display: errors.sendername?.message ? 'inline' : 'none' }}>
+                  {errors.sendername?.message}
                 </S.ErrorMsg>
               </>
             )}

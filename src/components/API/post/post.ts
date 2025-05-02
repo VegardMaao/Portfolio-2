@@ -7,17 +7,22 @@ import { messageInterface } from "../../interfaces/messageInterface";
  * @returns 
  */
 export const postData = async (url: string, data: messageInterface) => {
-    const body = data;
-    console.log(body);
+    const { sendername, email, subject, message } = data;
+
+    const body = new FormData();
+    body.append("sendername", sendername);
+    body.append("email", email);
+    body.append("subject", subject);
+    body.append("message", message);
+    body.append("_wpcf7_unit_tag", "e2910fd")
 
     const req = {
         method: `POST`,
-        body: JSON.stringify(body),
+        body: body,
     };
     const response = await fetch(url, req);
     if (!response.ok) {
         const error = await response.json();
-        console.dir(error)
         throw new Error(error.errors[0].message);
     }
     const json = await response.json();

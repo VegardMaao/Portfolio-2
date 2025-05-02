@@ -7,7 +7,7 @@ import { postData } from "./post";
  * @returns 
  */
 export const postMessage = async (message: messageInterface) => {
-    const contactURL = `https://sellmo.no/Flower_Power/wp-json/contact-form-7/v1/contact-forms/379/feedback`;
+    const contactURL = `https://sellmo.no/Flower_Power/wp-json/contact-form-7/v1/contact-forms/435/feedback`;
     const { data } = await postData(contactURL, message);
     return data;
 };
