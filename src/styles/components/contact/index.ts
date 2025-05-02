@@ -54,7 +54,7 @@ export const TextArea = styled.textarea`
 
 export const ErrorMsg = styled.p<ErrorMsgProps>`
   display: ${(props) => (props.o?.display)};
-  background: ${theme.color.orange};
+  border: 2px solid ${theme.color.white};
   font-size: 0.9rem;
   font-weight: 400;
 `;
