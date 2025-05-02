@@ -22,11 +22,14 @@ export const postData = async (url: string, data: messageInterface) => {
     };
     const response = await fetch(url, req);
     if (!response.ok) {
-        console.log(response);
         throw new Error(`${response.status}`);
     }
 
     const json = await response.json();
+    if (json.status === "mail_failed") {
+        throw new Error()
+    }
+
     return json;
 };
 
