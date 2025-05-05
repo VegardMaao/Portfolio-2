@@ -6,7 +6,6 @@ export function AboutMe() {
     <>
       <S.AboutWrapper id='about'>
         <Portrait />
-        {/* <S.Portrait src={`src/assets/images/portrait/portrait.jpg`} alt='Image of Vegard Maaø' /> */}
         <S.DescriptionWrapper>
           <S.HeaderOne>Vegard Maaø</S.HeaderOne>
           <S.HeaderTwo>Front-End Developer</S.HeaderTwo>
