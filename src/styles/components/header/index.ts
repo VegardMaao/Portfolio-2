@@ -77,26 +77,14 @@ export const StyledNavLink = styled.a`
   }
 `;
 
-export const StyledLogo = styled.img`
-  position: relative;
-  z-index: 100;
-  height: calc(100% - 10px);
-  background: ${theme.color.orange};
-  border: 2px solid ${theme.color.black};
-  border-radius: 15px;
-  left: 10px;
-
-  @media (${device.sm}) {
-    left: 0px;
-  }
-`;
 
 export const StyledHamburgerIcon = styled.div`
   z-index: 100;
   display: none;
-  position: fixed;
-  right: 20px;
-  top: 30px;
+  position: relative;
+  left: 40vw;
+  top: 10px;
+
 
   i {
     font-size: 2.4rem;
