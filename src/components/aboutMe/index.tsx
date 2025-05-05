@@ -4,7 +4,7 @@ export function AboutMe() {
   return (
     <>
       <S.AboutWrapper id='about'>
-        <S.Portrait src='\src\assets\images\portrait\portrait.jpg' alt='Image of Vegard Maaø' />
+        <S.Portrait src='src\assets\images\portrait\portrait.jpg' alt='Image of Vegard Maaø' />
         <S.DescriptionWrapper>
           <S.HeaderOne>Vegard Maaø</S.HeaderOne>
           <S.HeaderTwo>Front-End Developer</S.HeaderTwo>
