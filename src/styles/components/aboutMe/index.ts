@@ -27,6 +27,12 @@ export const DescriptionWrapper = styled.div`
     h1, h2, p{
         color: ${theme.color.white};
     }
+
+    a{
+    color: ${theme.color.white};
+    text-decoration: underline;
+    font-style: italic;
+    }
 `;
 
 export const HeaderOne = styled.h1`

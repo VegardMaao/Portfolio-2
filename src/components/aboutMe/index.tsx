@@ -9,11 +9,8 @@ export function AboutMe() {
         <S.DescriptionWrapper>
           <S.HeaderOne>Vegard Maaø</S.HeaderOne>
           <S.HeaderTwo>Front-End Developer</S.HeaderTwo>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, reprehenderit, vitae
-            ratione vero nemo ad dolore voluptates illo voluptatibus facere excepturi quis suscipit
-            quaerat deserunt distinctio nesciunt quas sapiente accusantium?
-          </p>
+          <p>Front-End Developer based in Norway.</p>
+          <a href='#contact'>Contact me for more info</a>
         </S.DescriptionWrapper>
       </S.AboutWrapper>
     </>
