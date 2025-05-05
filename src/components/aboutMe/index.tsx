@@ -1,10 +1,12 @@
 import { AboutStyles as S } from '../../styles';
+import { Portrait } from '../../assets/images/portrait/portrait';
 
 export function AboutMe() {
   return (
     <>
       <S.AboutWrapper id='about'>
-        <S.Portrait src={`src/assets/images/portrait/portrait.jpg`} alt='Image of Vegard Maaø' />
+        <Portrait />
+        {/* <S.Portrait src={`src/assets/images/portrait/portrait.jpg`} alt='Image of Vegard Maaø' /> */}
         <S.DescriptionWrapper>
           <S.HeaderOne>Vegard Maaø</S.HeaderOne>
           <S.HeaderTwo>Front-End Developer</S.HeaderTwo>
