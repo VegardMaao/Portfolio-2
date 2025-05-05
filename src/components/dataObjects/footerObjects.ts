@@ -1,6 +1,6 @@
 export const footerItems = [{
     title: `<i class="fa-brands fa-github"></i>`,
-    link: "https://github.com/VegardMaao/project-exam-2",
+    link: "https://github.com/VegardMaao/",
     target: "_blank",
 },
 {
