@@ -1,7 +1,7 @@
 import { portfolioItem } from "../interfaces/portfolioItem";
-import frameworksCAThumbnail from "../../assets/images/thumbnails/frameworksCAThumbnail.png"
-import projectExam2Thumbnail from "../../assets/images/thumbnails/projectExam2Thumbnail.png"
-import semesterProject2Thumbnail from "../../assets/images/thumbnails/semesterProject2Thumbnail.png"
+import frameworksCAThumbnail from "../../assets/images/thumbnails/frameworksCAThumbnail.jpg"
+import projectExam2Thumbnail from "../../assets/images/thumbnails/projectExam2Thumbnail.jpg"
+import semesterProject2Thumbnail from "../../assets/images/thumbnails/semesterProject2Thumbnail.jpg"
 
 export const portfolioItems: portfolioItem[] = [];
 
