@@ -63,7 +63,7 @@ export function ContactSection() {
             render={() => (
               <>
                 <S.FormLabel htmlFor='sendername'>Your Name</S.FormLabel>
-                <S.FormInput {...register('sendername')} />
+                <S.FormInput id='sendername' {...register('sendername')} />
                 <S.ErrorMsg o={{ display: errors.sendername?.message ? 'inline' : 'none' }}>
                   {errors.sendername?.message}
                 </S.ErrorMsg>
@@ -76,7 +76,7 @@ export function ContactSection() {
             render={() => (
               <>
                 <S.FormLabel htmlFor='email'>Your Email</S.FormLabel>
-                <S.FormInput {...register('email')} />
+                <S.FormInput id='email' {...register('email')} />
                 <S.ErrorMsg o={{ display: errors.email?.message ? 'inline' : 'none' }}>
                   {errors.email?.message}
                 </S.ErrorMsg>
@@ -89,7 +89,7 @@ export function ContactSection() {
             render={() => (
               <>
                 <S.FormLabel htmlFor='subject'>Subject</S.FormLabel>
-                <S.FormInput {...register('subject')} />
+                <S.FormInput id='subject' {...register('subject')} />
                 <S.ErrorMsg o={{ display: errors.subject?.message ? 'inline' : 'none' }}>
                   {errors.subject?.message}
                 </S.ErrorMsg>
@@ -102,7 +102,7 @@ export function ContactSection() {
             render={() => (
               <>
                 <S.FormLabel htmlFor='message'>Message</S.FormLabel>
-                <S.TextArea {...register('message')} />
+                <S.TextArea id='message' {...register('message')} />
                 <S.ErrorMsg o={{ display: errors.message?.message ? 'inline' : 'none' }}>
                   {errors.message?.message}
                 </S.ErrorMsg>
