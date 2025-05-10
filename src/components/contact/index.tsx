@@ -2,7 +2,7 @@ import { ContactStyles as S } from '../../styles';
 import { useForm, Controller } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { messageInterface } from '../interfaces/messageInterface';
+import { MessageInterface } from '../interfaces/messageInterface';
 import { postMessage } from '../API/post/postMessage';
 
 const regEx = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
@@ -31,14 +31,14 @@ export function ContactSection() {
     control,
     getValues,
     formState: { errors, isDirty, isValid },
-  } = useForm<messageInterface>({
+  } = useForm<MessageInterface>({
     resolver: yupResolver(schema),
     mode: 'onChange',
   });
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const formData: messageInterface = getValues();
+    const formData = getValues();
     const formElement = e.currentTarget;
 
     try {
@@ -56,7 +56,7 @@ export function ContactSection() {
       <S.ContactSection id='contact'>
         <S.FormHeader>Contact me</S.FormHeader>
 
-        <S.Form onSubmit={(e) => onSubmit(e)}>
+        <S.Form onSubmit={onSubmit}>
           <Controller
             name='sendername'
             control={control}
